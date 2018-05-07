@@ -170,9 +170,65 @@ Using less than 15 lines of hand-coded Solidity, we've created our own Ethereum 
 
 ## Interacting with the new token
 
-For this portion of the tutorial, we recommend using [MetaMask](http://metamask.io), a browser extension for Chrome and Firefox. It will allow you to switch between accounts quickly, perfect for testing the ability to transfer our newly created tokens. Our [Pet Shop tutorial](/tutorials/pet-shop) has more information about [configuring MetaMask](/tutorials/pet-shop#interacting-with-the-dapp-in-a-browser).
+For this portion of the tutorial, we recommend using [MetaMask](http://metamask.io), a browser extension for Chrome and Firefox. It will allow you to switch between accounts quickly, perfect for testing the ability to transfer our newly created tokens. 
 
-You will want to enter the mnemonic displayed in Ganache into MetaMask, and make sure that MetaMask is listening to the Custom RPC `http://127.0.0.1:7545`.
+1. Install MetaMask in your browser.
+
+1. Once installed, you'll see the MetaMask fox icon next to your address bar. Click the icon and you'll see this screen appear:
+
+   ![Privacy Notice](/tutorials/images/pet-shop/metamask-privacy.png )
+
+   *Privacy Notice*
+
+1. Click Accept to accept the Privacy Notice.
+
+1. Then you'll see the Terms of Use. Read them, scrolling to the bottom, and then click **Accept** there too.
+
+   ![Terms](/tutorials/images/pet-shop/metamask-terms.png)
+
+   *Terms of Use*
+
+1. Now you'll see the initial MetaMask screen. Click **Import Existing DEN**.
+
+   ![Initial screen](/tutorials/images/pet-shop/metamask-initial.png)
+
+   *MetaMask initial screen*
+
+1. In the box marked **Wallet Seed**, enter the mnemonic that is displayed in Ganache.
+
+   <p class="alert alert-danger">
+   **Warning**: Do not use this mnemonic on the main Ethereum network (mainnet). If you send ETH to any account generated from this mnemonic, you will lose it all!
+   </p>
+
+   Enter a password below that and click **OK**.
+
+   ![MetaMask seed phrase](/tutorials/images/pet-shop/metamask-seed.png)
+
+   *MetaMask seed phrase (for illustration purposes only)*
+
+1. Now we need to connect MetaMask to the blockchain created by Ganache. Click the menu that shows "Main Network" and select **Custom RPC**.
+
+   ![MetaMask network menu](/tutorials/images/pet-shop/metamask-networkmenu.png)
+
+   *MetaMask network menu*
+
+1. In the box titled "New RPC URL" enter `http://127.0.0.1:7545` and click **Save**.
+
+   ![MetaMask Custom RPC](/tutorials/images/pet-shop/metamask-customrpc.png)
+
+   *MetaMask Custom RPC*
+
+   The network name at the top will switch to say "Private Network".
+
+1. Click the left-pointing arrow next to "Settings" to close out of the page and return to the Accounts page.
+
+   Each account created by Ganache is given 100 ether. You'll notice it's slightly less on the first account because some gas was used when the contract itself was deployed and when the tests were run.
+
+   ![MetaMask account configured](/tutorials/images/pet-shop/metamask-account1.png)
+
+   *MetaMask account configured*
+
+   Configuration is now complete.
 
 <p class="alert alert-danger">
 **Warning**: Do not use the Main Network in MetaMask. If you send ether to any account generated from Ganache's default mnemonic, you will lose it all!
